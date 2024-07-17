@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+         Welcome to Time to Travel
+    </title>
+    <script>
+        function VerifyEmail(){
+             var email = document.getElementById("Email").value;
+             var error = document.getElementById("Emailerr");
+             if(email.indexOf("@")==-1) {
+               
+                 error.innerHTML = "Please Include @ in Email".fontcolor('red');
+             }
+             else if(email. endsWith("@gmail.com")!=1 ){
+                 error.innerHTML = "*Please Include gmail.com in Email".fontcolor('red');
+
+             } else {
+                 error.innerHTML="";
+             }
+           }
+           function VerifyPhoneno()
+           {
+             var pass = document.getElementById("Phoneno").value;
+             if(pass.length < 10)
+             {
+               alert("Phone Number should not be less than 10 digits");
+             }
+           }
+           function VerifyPassword()
+           {
+             var pass = document.getElementById("Password").value;
+             if(pass.length < 8)
+             {
+               alert("Password should be min 8 characters");
+             }
+           }
+     </script>
+</head>
+<body background="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcRODAepevJESvKmoYWQ8YAJJQO0j_a_ZgVaTFAobP3lXgETKX-kTOowNQH9_zxyUGC-aLS53LuzzNt0qys8gO4" width=100px><br><br><br><br><br><br><br><br>
+<center>
+<h1>Welcome to<br><font color=Darkblue size=48 style="font-family:Times New Roman;">Time to Travel</font></h1>
+<p>Sing up here and enjoy the Travel Experience</p>
+<form action="index.html#packages">
+    <b>Name:<input type="text" placeholder="Enter Your Name" name="user name" required><br><br>
+    Mail Id:<input type="text" placeholder="Enter Your e-Mail ID" name="mail id" required id="Email" required  onblur="VerifyEmail()">
+    <br> <span id="Emailerr"></span><br/>
+    Phone Number:<input type="tel" name="phone" pattern="[0-9]{10}" placeholder="Enter Your Phone Number" id="Phoneno" onblur="VerifyPhoneno()" required/><br><br>
+    Password:<input type="password" placeholder="Enter Password" name="password" id="Password" onblur="VerifyPassword()" required/><br><br>
+    Favourite Travel Destination(optional):<input type="text" placeholder="Enter your favourite travel destination" name="travel" ><br><br>
+
+         <button type="submit">Login</button> <br><br>
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+<head>
+    <style>
+        a{
+           text-decoration: none; 
+        }
+    </style>
+ <script>
+  function VerifyEmail(){
+       var email = document.getElementById("Email").value;
+       var error = document.getElementById("Emailerr");
+       if(email.indexOf("@")==-1) {
+         
+           error.innerHTML = "Please Include @ in Email".fontcolor('red');
+       }
+       else if(email. endsWith("@gmail.com")!=1 ){
+           error.innerHTML = "*Please Include gmail.com in Email".fontcolor('red');
+
+       } else {
+           error.innerHTML="";
+       }
+     }
+     function VerifyPassword()
+     {
+       var pass = document.getElementById("Password").value;
+       if(pass.length < 8)
+       {
+         alert("Please enter a Valid Password");
+       }
+     }
+</script>
+<title> Login Page </title> 
+</head>
+<body background="https://wallpaperaccess.com/full/208106.jpg" width="100%" >
+<a href="Home Page.html"target="blank"><img src="https://st2.depositphotos.com/3837271/6711/i/950/depositphotos_67115753-stock-photo-time-to-travel-wooden-sign.jpg"width="120"Height="120"></a>
+<h1><center><b>Welcome to <br/><font color=Darkblue size=48 style="font-family:Times New Roman;">Time to Travel</b></h1></center>
+<form action="index.html" onsubmit="return validateForm()">
+<table border="5" bordercolor="#2E8B57" align="center" width="50%" height="100" bgcolor="white" cellpadding="25" >
+<tr>
+<td align="center" background="https://img.freepik.com/free-vector/blue-pink-halftone-background_53876-99004.jpg?w=2000">
+<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="128" height="128" alt="user"></br></br>
+<b>Mail Id:<input type="text" placeholder="Enter mail ID" name="username" id="Email" required  onblur="VerifyEmail()">
+           <br> <span id="Emailerr"></span><br/>
+<p>Password:<input type="password" placeholder="Enter Password" name="password" id="Password" onblur="VerifyPassword()" required/></p><br/><br/>
+ <button type="submit">Login</button> </br></br>
+or Login with</br></br>
+<a href="https://accounts.google.com"> <img src="https://pbs.twimg.com/profile_images/1455185376876826625/s1AjSxph_400x400.jpg" width="50" height="50" border="2" ></a>
+<mapname="google''>
+<area shape= "rect" coords="0,0,50,50" href="https://www.google.com" alt="google" target="_blank"> </map>
+&ensp;
+<a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26state%3D%257B%2522fbLoginKey%2522%253A%25229pvxtcm9dljb4882tbx6xyve17s8tnuzz8e711rfempf1ojjb37%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%26scope%3Demail%26response_type%3Dcode%252Cgranted_scopes%26locale%3Den_US%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D2ef07d45-ff0b-4cef-ace8-070c3b29e845%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%25229pvxtcm9dljb4882tbx6xyve17s8tnuzz8e711rfempf1ojjb37%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253D%25252F%2522%257D%23_%3D_&display=page&locale=en_GB&pl_dbl=0"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/1200px-2021_Facebook_icon.svg.png" width="50" height="50" border="2"></a>
+<mapname="facebook''><br/><br/>
+If you don't have an account then sign up then <a href="signup.html" > click here</a>
+<br/><br/>
+
+<area shape= "rect" coords="0,0,50,50" href="https://www.facebook.com" alt="facebook" target="_blank"></map> </br></br>
+<input type="checkbox" checked="checked"> Remember me </br></br>
+ <a href="signup.html"> Forgot password </a>  </br></br>
+ <button type="reset" >Reset</button>
+
+</td>
+
+</body>
+</html>
